@@ -1,0 +1,134 @@
+why DevOps?
+
+traditional water fall model
+
+The waterfall model is a project management methodology that breaks down a project into a series of sequential phases.
+It's named after the way water cascades downward,
+
+what are the steps involved in waterfall model
+
+* Requrement and gathring analysis
+* Design
+* Implement
+* Test
+* Deploy
+* MAINTENANCE
+
+How it works?
+* The model is linear, with each phase completed before moving on to the next 
+* The model is rigid, with no flexibility to go back and change previous steps 
+* The model is well-suited for projects with fixed budgets, timelines, and requirements  
+
+What it's used for
+* The waterfall model is used in software development and product development 
+* It's also used in certain areas of engineering design 
+
+
+What are its benefits? 
+* The model can help minimize risk by integrating comprehensive documentation and upfront planning
+* The model can help align with traditional project management approaches
+
+
+What are its drawbacks?
+* The model can be less flexible than other methods, like Agile 
+* The model can lead to delayed testing, which can result in late discovery of mistakes and flaws 
+* The model can lead to lower customer satisfaction due to a lack of customer feedback 
+
+
+AGIL METHODOLOGY
+
+Agile methodology is a project management framework that breaks down projects into phases,  
+or sprints, and encourages teams to reflect and improve after each sprint
+It's an iterative approach that's designed to help teams develop products in environments that are subject to change.
+
+1. FIRST ITERATION
+* In this agile methodology each project is broken up into several iterations.
+
+2. SECOUND ITERATION
+* All iteration should be of the same time duration between 2 to 8 weeks.
+
+3. THIRD ITERATION
+* At the and of each iteration a working product should be delivered.
+
+
+DEVELOPMENT WITHOUT DEVOPS CULTURE.
+
+* Relese and Deploy
+* Unpredictable issues
+* Blame game
+* Lack of monitoring 
+
+
+DEVELOPMENT WITH DEVOPS CULTURE.
+
+* Streamlined Deliveries
+* Continuous monitrrings and feedback
+* Team work in collaboration
+
+WHAT NEEDS TO BE DONE
+
+* Use system with little (or) no waiting time
+* Use system with update code 
+
+
+OPERATIONS 
+
+* System should be up and running most of the time
+* System required for easy administration
+* Effective monitoring and feedbacks system should be established
+
+
+WHAT EXACTLY IS DEVOPS IN REAL LIFE 
+
+DEVELOPMENT TEM:
+* CODE
+* PLANE
+* TEST
+* BUILD
+
+OPERATION TEM
+* RELESE 
+* DEPLOY
+* OPERATE
+* MONITOR
+
+
+WHAT DEVOPS IS NOT
+
+* Devops is not a role person (or) organization
+* Devops is not a separate team
+* Devops is not a product (or) a tool
+* Devops is not about just writing scripts (or) implementing tools
+
+what is DevOps?
+
+DevOps is a practice that allows a single team to manage the entire application development life cycle, 
+that is development, testing, deployment and monitoring
+
+
+What does DevOps do?
+
+Integrates developers and operations teams improves collaboration and productivity by:
+Automating infrastructure
+Automating workflows
+Continuously measuring application performance
+
+Skills of a DevOps Engineer
+
+Tools:
+version control-GIT
+continuous Integration- Jenkins
+Virtualisation/Containerisation-Docker/Kubernetes
+configuration management-puppet/ansible
+monitoring-Nagios
+
+Networking Skills:
+General networking skills
+Establishing connection between the containers 
+port forwarding/container orchestration
+
+Other Skills:
+people skills
+process skill
+customer skills and empathy
+cloud awareness
