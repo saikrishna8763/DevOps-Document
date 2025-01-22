@@ -132,3 +132,310 @@ people skills
 process skill
 customer skills and empathy
 cloud awareness
+
+
+
+day 2: date:22/01/2025
+
+
+
+
+DEVOPS LIFE CYCLE : PLAN
+
+1> FIRST STAGE: of devops cycle where you plan terack visualize and summarize your project before 
+   working starting it
+  
+* PLANNING TOOLS:
+ jira
+ trella
+ tricentis
+
+2> SECOUND STAGES: of devops cycle where the developers write their code
+
+* CODING TOOLS:
+  eclipse
+  git
+
+
+3> Build is a pre release version and is identitied by a build number rather than by a release number
+
+* BUILDING TOOLS:
+  jenkins
+  maven
+  gradle
+  apache ant
+ 
+4> TEST: process of executing automated test as part of the software delivery pipeline in order to obtain feedback on the 
+         business risks associated with a software release as rapidly as possible
+
+* TESTING TOOLS:
+  jmeter
+  junit
+  Selenium
+
+5> RELEASING: this phase help to integrate code into a shared repository using 
+   which you can detect and locate errors quickly and easily 
+
+* RELEASING TOOLS:
+  travis cl 
+  gitlab
+  bamboo
+
+6> DEPLOY: manage and maintain development and deployment of sostware systems and servers in any compatational environment
+
+* DEPLOYING TOOLS:
+  aws
+  ansible
+  chef
+
+7> OPERATE: this phase is to keep the system upgraded with the latest update 
+
+*  OPERATING TOOLS:
+   nagious
+
+
+                 :DEVOPS LIFE CYCLE:
+
+          CLOUD: SERVERS
+                ^
+          DEVELOPERS : CODE
+                ^
+          GIT : VERSIONCONTROL  >>>JENKINES
+                ^
+          CONTINUOUS TESTING    >>>SELENIMUM
+                               
+                                >>>CONTAINERZATION >>{DOCKER} / VIRTUALIZATION >>{KUBERNETS}
+                               
+                ^               >>>CONFIGURATION MANAGEMENT
+                ^
+
+          CONTINUOUS MONITORING >>>NAGIOUS
+
+
+
+
+
+
+     WINDOWS -- OS 
+ 
+ source code management --GIT
+
+ BUILD TOOLS --APACHE MAVEN
+
+ WEB SERVER --APACHE TOMCAT
+
+ CI/CD --JENKINS
+ 
+ 1 >> MINI PROJECT
+
+
+=========================================
+
+           LINUX
+
+
+ CLOUD >> CLOUD COMPUTING 
+
+ INSTANCE --AWS/AZURE
+ 
+ LINUX 
+
+ source code management --GIT
+
+ BUILD TOOL --APACHE TOMCAT
+
+ CICD --JENKINS
+
+ 1 >>MINI PROJECT
+
+
+============================================
+
+ CONTAINERIZATION --DOCKER
+
+ CONTAINER ARCHACTION --K8s
+
+ CONFIG MANAGEMENT --ANSIBLE
+
+ MONITORING --PROMETHEUS WITH GRAFANA
+
+ CLUD SERVICES 
+
+ IAC --TERRAFORM
+
+===============================================
+
+          Topics:
+
+1. Why do we need version control?
+
+Collaboration
+
+Storing versions
+
+Figuring out what happened
+
+Backup
+
+
+
+2. What is version control?
+
+Version control is a system that documents changes made to a file or a set of files.
+
+It allows multiple users to manage multiple revisions of the same unit of information.
+
+It acts as a snapshot of your project over time.
+
+
+
+3. Types of Version Control:
+
+Local Version Control (LVC):
+
+The practice of having the version database on the local computer.
+
+A local database keeps a record of the changes made to files in the version database.
+
+
+ LOCAL VERSION CONTROL: >>ISSUE
+
+* ISSUE: multiple people parallely working on the same project
+
+* SOLUTION: centralized version control
+
+
+
+Centralized Version Control (CVC):
+
+
+*Local version control issues are resolved by centralized version control.
+
+*in entralized version control a central repository is maintained where all versioned files are kept.
+
+*Users can check out and check in files from their different computers at any time.
+
+
+
+3. Issues:
+
+If the central server fails, the entire system goes down.
+
+
+4. Solution:
+
+Distributed version control
+
+Distributed Version Control (DVC):
+
+
+*The version database is stored at every user's local system and at the remote server simultaneously.
+
+*Users can manipulate local files and then upload changes to the remote server.
+
+*If any server fails, another client-server can be used to recover the data.
+
+
+                      GIT
+
+
+           What is Git?
+
+
+ * Git is an open-source distributed version control system (DVCS) which records changes made to the files,
+   laying emphasis on speed, data integrity and distributed, non-linear workflows.
+
+    The Git File Workflow
+
+The remote repository is the server where all the collaborators upload changes made to the files.
+
+       [Remote Repository]
+
+ Developer A
+ * Working Directory
+ * Staging Area
+ * Local Repository
+
+
+Developer B
+ * Working Directory
+ * Staging Area
+ * Local Repository
+
+Commands:
+ * Clone
+ * Pull
+ * Fetch
+ * Push
+ 
+
+LOCAL REPOSITORY:
+
+ * Local repo is the user’s copy of the version database.
+
+ * The user accesses all the files through the local repository and then pushes the changes made to the Remote Repository.
+
+work Space:
+
+ * Look space is user’s active directory.
+
+ * The user modifies existing files or creates new files in this space. His tools track changes compared to your local Repository.
+
+Stage (or) index area:
+
+ * Stage is a place where all the modified files marked to be committed are placed.
+
+Clone:
+
+ * Clone command creates a copy of an existing Remote Repository inside the local Repository.
+
+Commit:
+
+ * Commit command commits all the files in the Staging area to the local repository.
+
+Push:
+
+ * Push command pushes all the changes made in the local Repository to the Remote Repository.
+   Let me know if you would like any specific parts
+
+
+Fetch Command:
+
+ * Fetch command collects the changes made in the Remote Repository and copies them to the local Repository.
+   This command doesn't affect our workspace. 
+
+Pull / Merge:
+
+ * Pull like fetch, gets all the changes from the remote repository and copies them to the local Repository.
+
+ * Pull merges those changes to the current working directory.
+
+
+
+
+         
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
