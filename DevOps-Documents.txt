@@ -133,6 +133,7 @@ process skill
 customer skills and empathy
 cloud awareness
 
+===========================================================================
 
 
 day 2: date:22/01/2025
@@ -194,7 +195,8 @@ DEVOPS LIFE CYCLE : PLAN
    nagious
 
 
-                 :DEVOPS LIFE CYCLE:
+                         :DEVOPS LIFE CYCLE:
+
 
           CLOUD: SERVERS
                 ^
@@ -409,6 +411,237 @@ Pull / Merge:
  * Pull like fetch, gets all the changes from the remote repository and copies them to the local Repository.
 
  * Pull merges those changes to the current working directory.
+
+===============================================================
+
+
+day-3: date:23/01/2025
+
+    interview What branching strategies are used:
+
+=> Trunk-based development: Most work is done in a single trunk, which is usually called "master" or "main"
+ 
+=> Release branching: A development branch is cloned after it has enough features
+ 
+=> Feature branching: A feature is changed in a specific branch until it's merged with the master
+ 
+=> Task branching: Each task gets its own branch
+ 
+=> Hotfix branching: A branch is created from the main branch to fix critical issues
+
+
+	
+        branching strategies are used: IN MY OROJECT:~
+
+    BASE -main (or) major -snapshot of project
+    
+    DEV
+
+    QA/TESTING
+
+    RELESE BRANCH
+
+    HOTFIXES -PRODUCTION -BASE
+
+    PR - PULL REQUEST
+
+
+  what is git rm --cached <filename>
+
+* cached. Removes the file only from the Git repository, but not from the filesystem.
+
+  By default, the git rm command deletes files both from the Git repository as well as the filesystem.
+
+  Using the --cached flag, the actual file on disk will not be deleted.
+
+
+                         VS
+
+
+
+  GIT RESTORE FILENAME:
+
+* git restore will restore the file to the last committed version, effectively undoing any changes that have been made since then.
+
+* The file has to be part of an earlier commit, "restore" 
+
+
+               GIT COMMANDS:
+
+
+
+* Git init:
+
+ command initializes a new git repository in the current directory. It sets up
+ the necessary files and directories for version control.
+ allowing you to start tracking changes to your files.
+
+* Git init:
+
+ The git init command creates a new git repository, used to connect an existing directory to a git repository or initialize a new empty repository.
+
+*Git clone:
+
+ command is used to create a copy of an existing git repository. It downloads the
+ entire repository, including the work directory, the git history, and all branches.
+
+*Git status:
+
+ command displays the state of the working directory and the staging area. It lets
+ you see which changes have been staged, which haven't, and which files aren't being tracked by git.
+
+* Status output does not show you any information regarding the committed project history.
+
+* Git log:
+
+  command displays committed snapshots.
+  It lets you list the project history, filter it, and search for specific changes.
+  Git log only operates on the committed history.
+
+* Git config:
+
+  git config command is a convenience function that is used to set configurations values
+  on a global (or) local project level. These configuration levels correspond to:
+  Git config text files. Executing git config will modify a configuration text file.
+
+* Git alias:
+
+  are a powerful workflow tool that creates shortcuts to frequently used git commands.
+  Using git alias will make you a faster and more efficient developer.
+
+* Git add:
+  command adds a change in the working directory to the staging area. 
+  It tells git that you want to include updates to a particular file in the next commit.
+
+* Git commit: Key points:
+
+  1. Saves staged changes.
+  2. Creates a commit message.
+  3. Tracks changes.
+
+  The commit command is used to save your changes to the local repository. 
+  Note that you have to explicitly tell git which changes you want to include in a commit before running the git commit command.
+
+
+* Git commit -m "msg":~ The command lets us write the commit message on the command line.
+
+* Git commit -am "message": The command used for only for exeasting file with out adding we can commit.
+
+*  Creating a New Branch:
+
+ * Command: git branch <name>
+ * Example: git branch new_branch
+
+Checking Current Branch:
+* Command: git branch
+
+Switching Branches:
+
+ * Commands:
+
+   * git checkout <branch_name>
+   * git switch <branch_name>
+
+Deleting a Branch:
+
+ * Command: git branch -d <branch_name>
+
+Viewing Changes:
+
+ * Command: git diff
+ * Description: Shows changes made between two to the file.
+
+Viewing Staged Changes:
+
+ * Command: git diff --staged
+
+Creating and Switching to a New Branch:
+
+ * Command: git checkout -b <branch_name>
+ * Example: git checkout -b raja
+
+   create a new branch and switch to that new branch (raja)
+   
+Git Reflog:
+
+ * Description:  Reflog an isolated branch to maintain an accurate running history of modifications made to your repository.
+ * Example: git branch like main , saikrishna it show all commited (or) aney changes will show
+
+
+       Git Stash:
+
+ * Command: git stash
+
+ * Description: Saves committed changes (both staged and unstaged), removes them from your working copy,
+   and then reverts them for later use. (To save temporary work)
+ 
+ * To exit from git stash: git stash show -p
+
+ * To show your files: git stash pop
+
+Git Log:
+
+ * Command: git log --summary
+
+ * Description: Provides a detailed log of commits along with a summary of the changes made in each commit, 
+   such as added or deleted files, renamed files, and changes in file permissions.
+
+Git Commit --amend:
+
+ * Command: git commit --amend -m "message"
+ * Description: Changes  (or) replace the last commit message. 
+
+Git tag command:
+
+* commit tags provide on alias for commit ID 
+  
+  git tag -a <annotation> -m "mesage"
+
+* you can also view all the tages you have created 
+
+  git tag
+
+* adding a tag to one of the previous commits 
+  
+  : git tag --a<annotation> <commit id> --m <message>
+
+* commit id can be obtained from git logs
+
+* allthese tags can be viewed in git 
+   : git show <tag -name>
+
+* git push 
+
+
+ :~ the current branch test has no upstream branch
+
+ :~ to push the currentbranch and set the remot as upstream,use
+
+
+* you created a branch in local but not in git hub so this command will use
+
+  : git push -set -upstream orgintest
+
+
+
+* create a new fork:
+
+  A fork is acopy of arepository forking a repository allows you to freely experiment 
+  
+  with changes without affecting the orginal project.
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
