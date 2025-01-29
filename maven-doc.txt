@@ -1,3 +1,6 @@
+DAY:4   DATE:28-1-2025
+
+
 what is maven
 
 Build Tool: Maven
@@ -156,6 +159,58 @@ Maven Build lifecycle:
 
  * A copy of Java installed and ready to use, with the JAVA_HOME environment variable set up 
    (Learn how to set up the JAVA_HOME environment variable in our guide to)
+
+
+
+DAY:5   DATE:29-1-2025
+
+
+
+
+      MAVEN THROUGH TERMINAL:
+
+* install the maven tar after verfing the signature
+
+   COMMAND:mvn -version
+
+** THIS COMMAND IS CREATE A FOLDERIN YOUR LOCAL MESSSION:
+    
+   mvn archetype:generate -DgroupId=com.example -DartifactId=helloworld 
+   -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+     MAVEN LIFECYCLE PHASES:
+
+* VALIDATE: check if the project is correct having all the necessery information
+
+* COMPILE: compile the source code of the project 
+
+* TEST: test the compile source code using a suitable unit testing work . 
+        this test should not require the code be packaged (or) deploy
+
+* PACKAGE: take the compiled code and package itin its distributable formate,such as ajar
+
+
+     MAVEN LIFECYCLE PHASES: 
+
+* INTEGRATION-TEST: proces and deploy the package into an environment where integration test can be run
+
+* VERIFI : run any checks to verify the packages is called valid and meets quality criteria
+
+* INSTALL: install the packages in to the local repository for us as a dependency in other project locally
+
+* DEPLOY: done in an integration or relese environment, copies the final package to the remote repository for sharing 
+          with other developer and project
+
+
+   WHAT IS .M2 FOLDER:
+
+ => it is local repository of the apachemaven 
+      c:\user\username\m2\repository
+
+ Apache maven has an advantagethat is whaen we run any of the life cycle phases it will also include previous phases as well
+
+EXAMPLE: it will run mvn package it will 4th phase also run previous phases as well (mvn validate, mvn compile,mvn test).
 
 
 
