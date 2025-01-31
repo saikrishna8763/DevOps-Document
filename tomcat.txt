@@ -1,0 +1,157 @@
+DAY:6     DATE:30-1-2025
+
+
+
+              WEB-SERVER:APACHE TOMCAT:
+
+ HOW TO INSTALL APACHE TOMCAT ON WINDOES:
+
+* Apache tomcat is an open-source web server and server lit container for java code
+
+             PREREQUISITES:
+
+* java jrc installed and configured 
+
+* administrator  privileges
+
+            HOW TO INSTALL TOMCAT:
+
+
+* via windows server installer 
+
+* from a zip archive 
+
+STEP:1:~ download tomcat for windows 
+
+      => browse to the offical apache tomcat website locate
+
+STEP:2:~ install tomcat
+
+      => install tomcat viathe windows service installer for an automated and wizard -guided experience.
+
+** after downloading the 64-bit windows zip the download file
+
+** navigate to the unzip of the apache tomcat
+
+
+* if at all we can change the default the port number we need to go to apache tomcat
+                         ......>conf>server.xml
+
+  <connector port ="8080" portocol="http/1.1"
+
+             connectiontimeout ="20000"
+
+             redirectport ="8443" />
+
+
+* changes the connector port number to any number between 1024 and 65535
+
+* how to start and stop apache tomcat
+
+ => goto tomcat folder the "bin" -->startup (windows batch file)
+
+* stop or shutdown  goto apache tomcat folder
+
+  --->bin-->shutdown (windows batch file)
+
+* for configuration changes
+
+ => apache tomcat --->conf
+
+* for hosting of the application (artifacts/deployer package)
+
+  =>apache tomcat --->webapps
+
+ * for logs
+
+ apache tomcat---> logs (apache tomcat ) and also application which is running inside tomcat
+
+
+ =>we can access apache tomcat using local host:8080 (or) else 127.0.0.1:8080
+
+
+
+Apache Tomcat has several important folders in its directory structure. Here’s a breakdown of the main ones:
+
+* bin/ – Contains startup (startup.sh, startup.bat) and shutdown (shutdown.sh, shutdown.bat) scripts, along with other executables.
+
+* conf/ – Contains configuration files like:
+
+* server.xml (Main configuration file)
+
+* web.xml (Default web application settings)
+
+* tomcat-users.xml (User roles and authentication)
+
+* lib/ – Stores shared libraries (.jar files) required by Tomcat.
+
+* logs/ – Stores logs like catalina.out, which logs Tomcat’s runtime activities.
+
+* temp/ – Holds temporary files used by Tomcat during execution.
+
+* webapps/ – The deployment directory where web applications (.war files) are placed.
+
+* work/ – Stores compiled JSP files and intermediate data.
+
+* ROOT/ (Inside webapps/) – The default web application if no specific path is given.
+
+
+
+DAY:6     DATE:31/1/2025
+
+
+
+
+1) Apache TomCat Folder Structure
+
+   conf-configuration
+   bin-binary (to start and stop the server)
+   webapps-hosting the application
+   logs-server logs
+   lib-libraries
+   temp-temporary files
+
+
+2) How to access the application url:
+   127.0.0.1:8080 or localhost:8080
+   <url of TomCat>/<ArtifactName>
+
+   Ex:localhost:8080/aja 
+   where "aja"-->Artifact Name
+
+3) To create project in maven:
+   mvn archetype:generate -DgroupId=com.example.helloworld -DartifactId=helloworld -DarchetypeArtifactId=maven-archetype-webapp 
+    -DinteractiveMode=false
+
+4) How we can place the artifact from the maven project of target folder to apache tomcat webapp folder:
+  cp <pathwhereartifact> <path where webapps of tomcat>
+  cp <source> <destination>
+  <destinationfolder> cp/<source> .
+
+   while copying use forward slash "/"
+
+4) If we do any configuration changes we need to restart the server
+   To change the port number of tomcat server we need to stop and start server
+   To stop tomcat ctrl+c
+
+5) To deploy the application anotherway is by using the tomcat gui
+   Access the url of tomcat then search for the .war file to deploy
+   click on choose file it will open dialogbox in dialogbox we need to select the artifact and click on open then we need to click on deploy button
+
+6) how can we access apache tomcat GUI go to tomcat home folder
+   home folder of apache tomcat -->conf
+   modify "tomcat-user.xml"(using text editor eg:vi)
+   vi tomcat-user.xml (we need to search for the line)<user username="admin"
+   need to uncomment these lines -- "<!--" "-->"
+   once we modify tomcat-user.xml file save and quit
+
+7) what is the difference between pom.xml and settings.xml
+   Use pom.xml to define dependencies, plugins, and configurations specific to a project.
+   Use settings.xml to configure Maven behavior globally, such as repository authentication and proxy settings.
+
+
+8)to view the last n number of lines where n is a number: tail -15 filename
+
+9)to view the first n number of lines where n is a number: head -2 filename
+
+
