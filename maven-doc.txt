@@ -287,6 +287,22 @@ STEP:2:~ install tomcat
 
 
 
+Apache Tomcat has several important folders in its directory structure. Here’s a breakdown of the main ones:
+
+bin/ – Contains startup (startup.sh, startup.bat) and shutdown (shutdown.sh, shutdown.bat) scripts, along with other executables.
+conf/ – Contains configuration files like:
+server.xml (Main configuration file)
+web.xml (Default web application settings)
+tomcat-users.xml (User roles and authentication)
+lib/ – Stores shared libraries (.jar files) required by Tomcat.
+logs/ – Stores logs like catalina.out, which logs Tomcat’s runtime activities.
+temp/ – Holds temporary files used by Tomcat during execution.
+webapps/ – The deployment directory where web applications (.war files) are placed.
+work/ – Stores compiled JSP files and intermediate data.
+ROOT/ (Inside webapps/) – The default web application if no specific path is given.
+
+
+
 
 
 
