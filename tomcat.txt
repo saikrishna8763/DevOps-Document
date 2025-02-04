@@ -97,7 +97,7 @@ Apache Tomcat has several important folders in its directory structure. Here’s
 
 
 
-DAY:6     DATE:31/1/2025
+DAY:7     DATE:31/1/2025
 
 
 

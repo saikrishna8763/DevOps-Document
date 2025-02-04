@@ -1,3 +1,4 @@
+DAY-8        DATE:1-2-2025
 1) what is Jboss?
    Jboss is a powerful open source java application server developed by Redhat.
 
@@ -72,5 +73,128 @@ c. Jboss wildfly GUI-->upload Artifact
 
 8) How we can configure master/slave architecture in wildfly
  Domain Mode:         WildFly must be run in domain mode to enable master/slave functionality. 
- Domain Controller:   The master server acts as the domain controller, responsible for distributing configuration and deployments to the slave servers. 
-Configuration File:   The domain.xml file defines the domain configuration, including the master and slave servers, and their communication details. 
+ Domain Controller:   The master server acts as the domain controller, responsible for distributing configuration and
+                      deployments to the slave servers. 
+
+Configuration File:   The domain.xml file defines the domain configuration, including the master and slave servers, and 
+                      their communication details. 
+
+
+
+DAY: 9            DATE:4-2-2025
+
+
+
+        CONFIGUREACTION CHANGES:~
+
+
+* things to keep in mind before changing configuration changes:
+
+ 1> where to chnage
+
+ 2> backup
+
+ 3> how to chnage 
+
+ 4> try or experiment on local environments
+
+ 5>documentation
+
+
+   SNAPSHOT/BACKUP:~
+
+  for wildfly - configuration snapshot
+            ^
+            ^
+=> home folder of wild fly-->standalone-->configuration-->standalone-xml-history
+
+   file name: standalone.v1
+
+   EX: port number change.v2
+
+   need to re name the orginal or existing file and then replace the cutnomized as per requirement /changes
+
+
+      different status of the artifacts deployed inwildfly:~
+
+  In wildfly deployed artifacts can have various status in cluding
+
+** DEPLOYED : the application is successfully running on the wildfly server and accessible to users
+
+** UNDEPLOYED : THE application has been removed from the server and not currently running
+
+** FAILED     : THE deployment process encountered an error and the appliction is not running
+
+** DISABLE    : THE application is instentionally stoped by the administrator and cannot be accessed untestenabled
+
+** SUSPENDED  : the application is temporarily paused and can be resumed later
+
+** REDEPLOYNG : THE application is currentlybeing update with new code  and  is not fully available while the 
+                redeployment process is ongoing
+
+
+          ACCESSING DEPLOYING STATUS:~
+
+ 
+          WILDFLY MANAGEMENT CONSOLE:
+
+ you can view the status of deployed artifacts through the wildfly admin console which provides alist of deployments
+ with with their current state.
+
+
+      CLI:~ COMMAND LINE INTERFACE:~
+
+  using the wildfly command line interface you can quary the ststus of deployments with managment commands
+
+
+* indeicating whether the applivation is currently running not deployedencountered an error during deployment
+  intentionally deactivated temporrarily paused or is in the process of being re-deployed with updates.
+
+
+      DOMAIN & HOST CONTROLLER IN WILDFLY:~
+
+ In jboss wildfly a domain contoroller is the central management point for a group of server within a domain 
+ responisible for maintainty the overall configuration and policy
+
+     while a host controller is a sperrate process running an each server within the domain communicating 
+ with the domain conroller to manage the individual server instances on that host machine.
+
+ essentiallythe domain controller dictates the overall configuration and the host controllers execute those 
+ configuration  on their respective servers.
+
+
+    KEY POINTS ABOUT DOMAIN AND HOST CONTROLLERS:~ 
+
+    DOMAIN CONTROLLER:~
+
+ 1> act as the central management point for the entir domain 
+
+ 2> store the domain -wide configuration in a file called domain.xml
+ 
+   (home folder-->domain-->configuration-->domain.xml)
+
+ 3> responisible for distributing configuration changes to all host controllers with the domain.
+
+    HOST CONTROLLER:~
+
+ 1> manages the application server instance running on a specific host.
+
+ 2> reeds its configuration from a host.xml file specific to that host
+    (home folder-->domain-->configuration-->host.xml)
+
+ 3> communicates with the domain controller to receive configuration updates and start/stop server instances.
+
+
+
+*** domain is reffearing to centrilized master wildfly where we can manage other -host wildfly server.
+
+ 
+
+
+ 
+
+
+
+
+
+
