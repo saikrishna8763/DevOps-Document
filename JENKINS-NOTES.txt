@@ -1,0 +1,230 @@
+                                      *continuous integration*
+
+
+IMPORTANCE OF CONTINUOUS INTEGRATION:-
+  1) Improve quality:- 
+          Improves the quality by running multiply unit test and analysing various static codes.
+
+  2) Increases productivity:-
+          Automating build of code saves a lot of time, there by increasing productivity.
+
+  3) Reduces risk:-
+          Eliminating the risk of potential human errors by automating test.
+
+
+
+INTRODUCTION TO JENKINS:-
+
+   -> Easy installation process 
+   -> provides advance security 
+   -> optimized performance
+   -> upgrades are easy available
+   -> light weight container support
+   -> distributed team management
+
+
+WHAT IS CONTINUOUS INTEGRATION:-
+     It is the process of automating the building and testing of code, each time one of the team member commit changes to version control.
+continuous integration, continuous delivery (or) deployment but delivery is also known as release, then first stage is CI, second stage is CD, 
+and third stage is placing the artifact in the web server.
+
+POPULAR CONTINUOUS INTEGRATION TOOLS:-
+
+    -> Gitlab CI
+    -> Code ship
+    -> Bamboo
+    -> Jenkins
+    -> Team city
+    -> Travis CI
+
+   From the AWS cloud if we want to perform CICD, there are various services like code commit, code deploy and code guru, AWS code build, AWS pipeline.
+
+
+IN AZURE CLOUD :-
+    Azure devops, Azure boards, Azure repos, Azure pipeline, Azure test plans, Azure Artifact.
+
+
+WHAT IS JENKINS?
+       A continuous integration server which manages and control processes such as plain, code, build, test, deploy, operate and monitor in devops environment.
+
+
+WHY JENKINS IS SO POPULAR?
+   -> Open source
+   -> Good plugins support
+   -> Good community support 
+   -> Fast and reliable
+   -> Good OS support
+   -> scripted builds
+
+
+TOPICS:-
+
+  -> Jenkins Architecture
+  -> Plugin management in Jenkins
+  -> Jenkins security management
+  -> notification in Jenkins
+  -> Jenkins master slave architecture
+  -> Jenkins delivery pipeline
+  -> Jenkins declarative pipeline
+
+JENKINS ARCHITECTURE: SOURCE CONTROL MANAGEMENT
+ 
+ * Jenkins Architecture: Source control management
+ 
+                  git --→ Jenkins                                         
+                            |                                             
+                            |                           ________________  
+___________________________________________________     |               |  | → Test Environment
+|  ________________    _______________   ________  |    |Is branch test,|  |
+| | Build+unitTest | → |Function Test| → |Deploy|  |    |release        |  | → Release Evironment
+| ------------------   ---------------   --------  |    |     (or)      |  |
+____________________________________________________    | production    |  | → Production Environment
+                                                        ------------------ |
+
+PLUGIN MANAGEMENT IN JENKINS :~
+ 
+ 
+              UPDATE -->shows update to already installed
+ 
+              AVAILABLE -->show plugins that are available for installation
+=>TABS
+              INSTALLED -->display plugins installed that have no updates
+ 
+              ADVANCED -->lists configuration of http proxy allows manual upload of plugin and url plugin site
+ 
+ 
+In real time we cant install the plugins as simple as simple as that reasons being they meights be challanges
+  with proxy settings as well as vpn (virtual private networking) in order to avoide we should configure HHTP 
+  proxy in jenkins plugin of advance tab.
+ 
+ 
+
+  HOW TO INSTALL JENKINS ON WINDOES:~
+ 
+* using docker 
+* using kubernets
+* war files
+* offline installation
+* other servlet containers
+ 
+ 
+      PREREQUISITES:~
+ 
+ 
+* minimum hardware requirements
+ 
+  * 256 MB of RAM 
+  * 1 GB of drive space although 10GB is a recommand minimum it running the jenkins as a docker container.
+ 
+ 
+* Recommended hardware configuration for a small team:
+  * 4GB + of RAM
+  * 50GB + drive space
+  comrechensive hardware recommendations.
+ 
+ 
+* Jankins tools is developed on java code
+ 
+ 
+            PREREQUISITES:~
+ 
+* A system running windoes 10
+ 
+* The latest copy of java development kit or java runtime enviranment installed.
+ 
+* Access to an account with admainistrator privillages.
+
+
+
+INSTALL JENKINS ON WINDOWS
+   
+   -> Browse to the official Jenkins download page. Under the "downloading Jenkins" section is a list of installers for the long-term support (LTS) version of Jenkins.
+    Click the Windows link to begin the download.
+       * URL will be Jenkins.in/download/
+
+   -> Once you click on "download windows" text, it will open a new tab saying "Thank you for downloading" and the download will start.
+
+   -> After downloading, go to the downloads folder and double-click on the Jenkins file, which is of type "Windows installer package".
+
+   -> The setup wizard starts. Click "Next" to proceed.
+
+   -> Select the install destination folder and click "Next" to continue.
+
+   -> Under the "Run service as a local or domain user" option, enter the domain username and password for the user account you want to run Jenkins with. 
+        Click "Test credentials" to verify the login data, then click "Next" to proceed.
+         * Select the first option: "Run service as LocalSystem"
+
+   -> Enter the port number you want Jenkins to run on. Click "Test port" to check if the selected port is available, then click "Next" to continue.
+         * Default port of Jenkins is 8080
+
+   -> Select the directory where Java is installed on your system and click "Next" to proceed.
+
+   -> Select the features you want to install with Jenkins and click "Next" to continue.
+
+   -> Click "Install" to start the installation process.
+
+
+
+    ## After completion of the installation process, you have to unblock Jenkins before you can customize and start using it.localhost: 8080 , 127.0.0.1:8080.
+
+    1) In your web browser, navigate to the port number you selected during the installation using the following address:
+           http://localhost:[port number]
+               127.0.0.1:8080
+
+    2) Navigate to the location on your system specified by the "Unlock Jenkins" page.
+            & Please copy the password
+          C:\ProgramData\Jenkins.jenkins\secrets\initialAdminPassword
+
+         Where "initial Admin Password" is a file.
+
+            In order to read the data of that file, use the "cat" command.
+              At the command prompt:
+          "cat C:\ProgramData\Jenkins.jenkins\secrets\initialAdminPassword"
+
+    3) Copy the password from the "initial Admin Password" file.
+
+    4) Paste the password in the "Administrator password" field on the "Unlock Jenkins" page and click "Continue" to proceed.
+
+
+       CUSTOMER JENKINS:
+
+   * Click the "Install suggested plugins" button to have Jenkins automatically install the most frequently used plugins.
+
+   * After Jenkins finishes installing the plugins, enter the required information on the "Create First Admin User" page. Click "Save and Continue" to proceed.
+
+   * User name: [Enter username]
+
+   * Password: [Enter password]
+
+   * Confirm password: [Confirm password]
+
+   * Full name: [Enter full name]
+
+   * E-mail address: [Enter email address]
+                                                                                                                          [Save & Continue button]
+
+  * click "Save and Finish".
+
+
+      How to stop Jenkins:
+
+   -> Go to the "Services" in Windows.
+   -> Select (or search for) "J".
+   -> In the left side, you will see the "Stop" option.
+
+         How to restart Jenkins:
+
+  -> One way is a safe restart. Go to the URL of Jenkins:
+        http://localhost:8080/safeRestart
+  -> Jenkins will try to pause jobs and restart once all running jobs are either finished or paused.
+
+
+         Jenkins is restarting banner:
+
+       This will be displayed on most Jenkins pages. You can use it to let users know what is happening. A default message will be added if you don't supply one.
+
+
+
+      
+ 
+
