@@ -1,4 +1,8 @@
-                                      *continuous integration*
+DAY-10              DATE:5-2-2025                                      
+
+
+
+                *continuous integration*
 
 
 IMPORTANCE OF CONTINUOUS INTEGRATION:-
@@ -72,14 +76,14 @@ JENKINS ARCHITECTURE: SOURCE CONTROL MANAGEMENT
  * Jenkins Architecture: Source control management
  
                   git --→ Jenkins                                         
-                            |                                             
-                            |                           ________________  
-___________________________________________________     |               |  | → Test Environment
-|  ________________    _______________   ________  |    |Is branch test,|  |
-| | Build+unitTest | → |Function Test| → |Deploy|  |    |release        |  | → Release Evironment
-| ------------------   ---------------   --------  |    |     (or)      |  |
-____________________________________________________    | production    |  | → Production Environment
-                                                        ------------------ |
+                                                                         
+                            ^                            
+                            ^                                             | → Test Environment
+|                                                  |    |Is branch test,  |
+| | Build+unitTest | → |Function Test| → |Deploy|  |    |release          | → Release Evironment
+|                                                  |    |     (or)        |
+                                                        | production      | → Production Environment
+                                                                        
 
 PLUGIN MANAGEMENT IN JENKINS :~
  
@@ -221,7 +225,186 @@ INSTALL JENKINS ON WINDOWS
 
          Jenkins is restarting banner:
 
-       This will be displayed on most Jenkins pages. You can use it to let users know what is happening. A default message will be added if you don't supply one.
+       This will be displayed on most Jenkins pages. You can use it to let users know what is happening. 
+       A default message will be added if you don't supply one.
+
+=====================================================
+
+DAY-11           DATE:6-2-2025
+
+
+             PLUGIN INSTALLATION:~
+
+ THERE ARE 2 WAYS TO UNSTALL THE PLUGINS
+
+ 1> Automatically
+
+ 2> manually
+
+ 1>AUTOMAICALLY :> once we login to jenkins GUI left side you will be seen the option of manage jenkins click on manage
+                   jenkins  we have system configuration
+
+ ==>> click on plugins go to available plugins
+
+ ==>> search for the plugin which is required 
+
+ ==>> select the plugin under the list one you select the plugin install button  will be highlighted them click on install button
+
+ 2>MANUALLY :> under plugins tab go to available plugin and search for ansible plugin and click on the plugin which is required
+               once you click on the plugin new	 tab will be open the click on the release, under release we will see the various
+               version of the specific go for the plugin which is required the specific version under the installation option we 
+               can see the direct link option we have to click on the direct link plugin will get downloaded to under local machine
+
+
+
+Plugins definition:-
+ 
+           Where we can add, remove, disable or Enable plugins that can Extend the functionality of Jenkins.
+ 
+           → When we install the plugin in automatic way plugins Extention is JPI (Jenkins plugin) when Extention.
+ 
+           we install the plugin in manually way plugin Extention is HPI (hudson plugin)
+ 
+How to uninstall the plugins:-
+ 
+          Manage Jenkins → plugins → Install plugins
+ 
+          → Search Plugin name which we wanted to uninstall select the plugin and then uninstall button will be high lighted once clicked on uninstall,
+              plugin will get uninstall.
+ 
+How to update the plugins
+ 
+           Manage Jenkins → plugins → updates
+ 
+           → Select the plugin and then update button will be highlighted once clicked on update, plugin will get update.
+ 
+Here's how to get this into a Word document:
+          * Copy the text above.
+ 
+          * Open a new Microsoft Word document.
+ 
+          * Paste the copied text into the document. (You can use Ctrl+V or right-click and select "Paste")
+ 
+          * Format the text as needed within Word. You can adjust font, spacing, add bullet points, etc.
+ 
+          * Save the document. Choose a location and file name, and save it as a .doc or .docx file.
+ 
+   → Select the plugin and then update button will be highlighted once clicked on update, plugin will get update.
+   → In Real time we should not update the plugins directly, Reason being there may be the challenges Encountered. 
+      It will be recommended to plugins in our local machines where other team members will not effected. If any thing goes wrong.
+ 
+How to create the users?
+ 
+     Manage Jenkins → Security → Users (Create/Delete/modify users that can log in to this Jenkins.)
+ 
+   → Click on the users we can see the create user option after clicking on the user option we can see the username, password, confirm password,
+       full name, Email address then click on create user.
+ 
+How to give permission to users:-
+ 
+    Manage Jenkins → Security (Secure Jenkins; define who is allowed access/use the system)
+ 
+    → Best click on that there we can see Authorization under that you will see add user button, after click on that button we will get user id after giving
+      user id then click on "Ok" button, after that we have to see user is added then we have to give required permission to the user by checking the box 
+       (The minimum access is to give over all read)
+ 
+    → By Default what ever we create users for Jenkins will get stored in Jenkins' own users data base.
+ 
+    → This is suitable for smaller setup where you have no Existing user data base elsewhere. Other option is LDAP (Lightweight directory Access protocol)
+ 
+Authorization Strategy:-
+ 
+       By default we will see project based authorization matrix with these we can manage the authorization based on the options available under strategy.
+ 
+             Example: Credentials, Agent, Job, Run, Etc...
+Matrix authorization strategy:-
+ 
+          Matrix Authorization allows configuring the lowest level Permissions, such as starting new builds, configuring items, or deleting them individually.
+has context menu
+
+
+
+ JENKINS PROJECT (PROJECT (OR) JOB BOTH ARE SAME)
+
+  IT IS A COMBINATION OF ONE OR MORE TASKS
+
+ ==>FREE STYLE PROJECT:~
+
+    classic ,general-purpose job type that checkes out from one scm,executes build steps serially followed by post -build steps like archiving 
+    artifacts and sening email notifications.
+
+ ==>MAVEN PROJECT:~
+
+    Build a maven project, jenkins takes advantages of your pom file and drastically reduces the configuration 
+
+ ==>PIPELINE:~ 
+
+    Orchestrates long-running activities that can span multiple build agents. Suitable for building
+    pipelines (formerly known as workflows) and/or organizing complex activities that do not easily
+    fit in free-style job type.
+
+ ==>MULTI-CONFIGURATION PROJECT:~
+
+    Suitable for projects that need a large number of different configurations, such as testing on
+    multiple environments, platform-specific builds, etc.
+
+ ==>FOLDER:~
+
+    Creates a container that stores nested items in it. Useful for grouping things together. Unlike
+    view, which is just a filter, a folder creates a separate namespace, so you can have multiple things
+
+
+ ==>MULTI BRANCH PIPELINE:~
+
+    Creates a set of Pipeline projects according to detected branches in one SCM repository.
+
+
+ ==>ORGANIZATION FOLDER:~
+
+    Creates a set of multibranch project subfolders by scanning for repositories.
+
+
+
+        HOW TO CREATE THE JOB OR PROJECT :~
+
+  In jenkins GUI will see the "+ new items" click on that new item the item name then select the item type once select any of the item
+  click on "ok" button which is highlighted
+ 
+ ==>> job configuration is conists of general (where we cangive information or discription about the project)
+
+ ==>> source code management where we will be passing url of the repositories
+
+ ==>> build triggers (in what way we wanted to trigger or build the job)
+
+ ==>> build environment
+
+ ==>> build steps (where we can add tasks)
+
+ ==>> post-build actions
+
+
+      HOW TO GET A FREE STYLE LEARNING JOB:~
+
+ ==>> NEW ITEM (GIVE THE JOB NAME)
+
+ ==>> select an item then click on "ok"
+
+ ==>> go to the build steps configuration of jbos click on build steps dropdown and select execute windows batch command
+
+ ==>> and just type "dir" and click on save 
+
+ ==>> and click on build now option in the leftside and we can check there console output
+
+
+
+                        BLUE OCEAN:~
+
+   WHAT IS BLUE OCEAN ?
+
+ * blue ocean rethinks the jenkins user experiences designed from the ground up for jenkins pipeline and comatible with freestyle jobs 
+
+      
+
 
 
 
