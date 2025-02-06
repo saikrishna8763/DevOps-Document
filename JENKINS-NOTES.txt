@@ -76,6 +76,7 @@ JENKINS ARCHITECTURE: SOURCE CONTROL MANAGEMENT
  * Jenkins Architecture: Source control management
  
                   git --→ Jenkins                                         
+<<<<<<< HEAD
                                                                          
                             ^                            
                             ^                                             | → Test Environment
@@ -84,6 +85,15 @@ JENKINS ARCHITECTURE: SOURCE CONTROL MANAGEMENT
 |                                                  |    |     (or)        |
                                                         | production      | → Production Environment
                                                                         
+=======
+                            |                                             
+                            |                                              → Test Environment
+|                                                                       |    |Is branch test,|  
+| | Build+unitTest | → |Function Test| → |Deploy|  |    |release        |   → Release Evironment
+|                                                           (or)      
+                                                        | production    |   → Production Environment
+                                                        
+>>>>>>> b4e10ec3a959acaec4d89d4f04e80a4fa9ebbfa7
 
 PLUGIN MANAGEMENT IN JENKINS :~
  
