@@ -73,13 +73,12 @@ JENKINS ARCHITECTURE: SOURCE CONTROL MANAGEMENT
  
                   git --→ Jenkins                                         
                             |                                             
-                            |                           ________________  
-___________________________________________________     |               |  | → Test Environment
-|  ________________    _______________   ________  |    |Is branch test,|  |
-| | Build+unitTest | → |Function Test| → |Deploy|  |    |release        |  | → Release Evironment
-| ------------------   ---------------   --------  |    |     (or)      |  |
-____________________________________________________    | production    |  | → Production Environment
-                                                        ------------------ |
+                            |                                              → Test Environment
+|                                                                       |    |Is branch test,|  
+| | Build+unitTest | → |Function Test| → |Deploy|  |    |release        |   → Release Evironment
+|                                                           (or)      
+                                                        | production    |   → Production Environment
+                                                        
 
 PLUGIN MANAGEMENT IN JENKINS :~
  
