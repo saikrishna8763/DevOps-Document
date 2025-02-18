@@ -1,0 +1,124 @@
+ WHAT WILL HAPEEN WHEN WE START COMPUTER
+
+ When you turn on a computer, it goes through a startup process called booting. During booting, the computer's BIOS (Basic Input/Output System) or UEFI (Unified Extensible Firmware Interface) checks the hardware and loads the operating system into the computer's memory
+
+Steps in the booting process
+
+Power-on: The power supply unit (PSU) sends power to the computer's components. 
+
+Power-on self-test (POST): The BIOS or UEFI checks that the computer's hardware is working properly. 
+
+BIOS/UEFI initialization: The BIOS or UEFI initializes and starts the monitor and keyboard. 
+
+Booting: The boot device loads the operating system into the computer's memory.
+
+ 
+What happens after booting
+
+After booting, the computer will display a dialogue box asking for a username and password. 
+
+How to start a computer
+
+You can start a computer by pressing the power button on the computer or monitor. You can also start a computer using a software command.
+
+
+
+
+   GNU 
+
+ * GNU is a project that develops free software, and GNU/Linux is an operating system that uses many of GNU's programs
+
+* GNU/Linux is a flexible operating system because it branches off into many different software packages, called distributions. Each distribution changes   the appearance and function of GNU/Linux. 
+
+* GNU/Linux is not owned by one organization, and many unpaid volunteers contribute to its development.
+
+
+ GNU
+* GNU stands for "GNU's not Unix". It's a project that develops, supports, and enforces free software. 
+* GNU's programs are called "packages". 
+* GNU also has its own kernel called Hurd
+
+
+     how it works ext file system in linux:~
+     ___________________________________________
+
+* In Linux, the "ext" file system, which stands for "extended file system," is the primary file system designed specifically for the Linux kernel, organizing data on a disk by dividing it into blocks and using metadata to track file information, with the most current version being "ext4" which offers features like large file support, journaling for data integrity, and efficient allocation of disk space through the use of extents, significantly improving performance for large files and reducing fragmentation; essentially, it allows Linux to store and manage files effectively on a hard drive by keeping track of where each file is located and its attributes like permissions and ownership
+
+
+* Key points about the ext file system:
+
+Evolution:
+The ext file system has evolved through several versions, with ext4 being the most widely used today, offering significant improvements over earlier versions like ext2 and ext3. 
+
+Block Groups:
+The disk is divided into block groups, each containing a set of data blocks, inode bitmap, and block bitmap, which helps in efficient allocation and management of disk space. 
+
+Inodes:
+Each file on the system is represented by an "inode" which stores metadata like file size, permissions, owner, and pointers to the data blocks where the file content is stored. 
+
+Journaling:
+Ext3 and ext4 utilize a journaling system where changes to the file system metadata are logged before being written to the disk, allowing for faster recovery in case of system crashes. 
+
+Extents:
+A key feature of ext4 is the use of extents, which allows for contiguous allocation of large blocks of data, improving performance when dealing with large files. 
+
+
+ How it works in practice:~
+
+Creating a file:
+When a new file is created, the system allocates an inode for it and records the file's metadata in the inode.
+ 
+Writing data:
+When data is written to a file, the system allocates necessary blocks on the disk and updates the inode with pointers to those blocks. 
+
+Accessing a file:
+To read a file, the system looks up the file's inode, retrieves the block pointers, and reads the data from the corresponding blocks on the disk. 
+
+* Which One Should You Use?
+
+ext2: Best for USB drives and SD cards (to reduce write operations).
+
+ext3: Only if you're working with an old Linux system.
+
+ext4: Recommended for modern Linux systems due to performance and reliability
+
+    Linux directory structure
+
+/ – The root directory
+/bin – Binaries
+/dev – Device files
+/etc – Configuration files
+/usr(unix sharable resource) – User binaries and program data
+/home – User personal data
+/lib – Shared libraries
+/sbin – System binaries
+/tmp – Temporary files
+/var – Variable data files
+/boot – Boot files
+/proc – Process and kernel files
+/opt – Optional software
+/root – The home directory of the root
+/media – Mount point for removable media
+/mnt – Mount directory
+/srv – Service data
+
+what are the some special files that represent hardware devices, system information etc
+
+In Linux, special files are used to represent hardware devices, system information, and process management. These files are typically found in directories like /dev, /proc, and /sys. Here’s an overview of the important ones:
+
+Special File	         Purpose
+/dev/sda, /dev/sdb	Hard drives
+/dev/null	       Discards all data
+/dev/zero	       Generates null bytes
+/dev/tty	       Terminal interface
+/proc/cpuinfo	       CPU details
+/proc/meminfo	       Memory usage
+/sys/class/net/	       Network interfaces
+
+
+
+
+
+
+
+
